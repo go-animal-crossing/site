@@ -1,7 +1,7 @@
 {% set prefix = "" %}
 {% set suffix = "" %}
-{% if type != "mixed" %}
-{% set prefix = type + "/" %}
+{% if type and type != "mixed" %}
+{% set prefix = "/" + type %}
 {% endif -%}
 {% if hemisphere %}
 {% set suffix =  "/" + hemisphere %}
@@ -15,7 +15,7 @@
         <section class='grid page-nav monthly'>
             <nav class='grid grid__item monthly-navigation'>        
             {% for i in range(0, 12) %}
-               <a href='/new/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="New in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+               <a href='{{ prefix }}/new/{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="New in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
             {% endfor -%}
             </nav>
         </section>
@@ -27,7 +27,7 @@
         <section class='grid page-nav monthly'>
             <nav class='grid grid__item monthly-navigation'>        
             {% for i in range(0, 12) %}
-               <a href='/leaving/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Leaving in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+               <a href='{{ prefix }}/leaving/{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Leaving in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
             {% endfor -%}
             </nav>
         </section>
@@ -39,7 +39,7 @@
         <section class='grid page-nav monthly'>
             <nav class='grid grid__item monthly-navigation'>        
             {% for i in range(0, 12) %}
-               <a href='/available/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Available in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+               <a href='{{ prefix }}/available/{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Available in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
             {% endfor -%}
             </nav>
         </section>
