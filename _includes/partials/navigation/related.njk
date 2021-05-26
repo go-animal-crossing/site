@@ -11,7 +11,7 @@
 
     {% if hemisphere == "northern" %}
     <p class='small'>View <a href="{{ prefix }}/southern">southern</a> hemisphere{% if type != "mixed" %} {{type }}{% endif -%}.</p>
-    {% elseif hemisphere == "southern" %}
+    {% elif hemisphere == "southern" %}
     <p class='small'>View <a href="{{ prefix }}/northern">northern</a> hemisphere{% if type != "mixed" %} {{type }}{% endif -%}.</p>
     {% else %}
     <p class='small'>View <a href="{{ prefix }}/northern">northern</a> or <a href="{{ prefix }}/southern">southern</a> hemisphere{% if type != "mixed" %} {{type }}{% endif -%}.</p>
