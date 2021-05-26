@@ -1,0 +1,226 @@
+*{
+	box-sizing: border-box;
+	font: inherit;
+	color: inherit;
+}
+html,
+body{
+	font-family: 'Oswald', sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4{
+	margin:0;
+	color: $headerColour;
+}
+
+/**
+ * fonts
+ */
+h1,
+.title,
+.important{
+	font-family: 'Modak', serif;
+}
+
+h1,
+.title,
+.important{
+	color: $headerColour;
+	@include fontSize($h1FontSize *0.5);	
+	@include mq($from: tablet) {
+		@include fontSize($h1FontSize);	
+	}
+	&::first-letter
+	{
+		text-transform: uppercase;
+	}
+}
+
+.important{
+	line-height: 1.2em;
+	margin-bottom: 0.1em;
+	@include fontSize($h1FontSize *0.5);	
+	@include mq($from: tablet) {
+		@include fontSize($h1FontSize *0.5);	
+	}
+}
+
+h2{
+	@include fontSize($h2FontSize);
+}
+
+h3{
+	font-weight: 700;
+	@include fontSize($h3FontSize);
+}
+
+h4{
+	font-weight: 700;
+	@include fontSize($h4FontSize);
+}
+
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+td,
+th,
+span,
+.sans,
+blockquote
+{
+	line-height: $copyLineHeight;
+}
+
+a,
+li,
+strong,
+b,
+i,
+em{
+	font-family: inherit;
+}
+
+a{
+	&:hover{
+		color: $accentColour;
+	}
+	&:focus { outline: none; }
+
+	&.button{
+		background: $accentColour;
+    	color: $white;
+		@include fontSize($copyFontSize);
+		display:inline-block;
+		padding: $paddingInner / 2;
+		text-decoration: none;
+
+		&:hover{
+			color: $white;
+		}
+	}
+}
+
+/**
+ * copy
+ */
+
+p,
+blockquote{
+	margin-bottom: $copyMarginBottom;
+	line-height: $copyLineHeight;
+	@include fontSize($copyFontSize);
+	
+	&:last-child,
+	&.last{
+		margin-bottom: 0;
+	}
+}
+
+.small {
+	@include fontSize($copyFontSize * 0.85);
+}
+
+body,
+html{
+	background-color: $paleColour;
+}
+
+
+table{
+
+	th,
+	td{
+		text-align: left;
+		padding: ($paddingInner / 2);
+	}
+	
+	
+	th{
+		font-weight: bold;
+	}
+}
+
+strong,
+b{
+	font-weight: 700;
+}
+
+i,
+em{
+	font-style: italic;
+}
+
+fieldset{
+	border:0;
+	padding: 0;
+	margin: 0;
+	padding-right: $paddingInner / 2;
+	
+	label,
+	input,
+	select{
+		width: 100%;
+		display: block;
+	}
+}
+
+label{
+	padding: $paddingInner / 2 0;
+}
+
+.container{
+	padding: $paddingOuter;
+	width: $contentContainerWidth;
+	max-width: $contentContainerMaxWidth;
+	margin: auto;
+	@extend %clearfix;
+}
+
+.feature-img{
+	float: left;
+	max-width: 25%;
+	margin-right: 15px;
+}
+
+.critter{
+	@extend %clearfix;
+}
+
+.rounded {
+	border-radius: 10px;
+}
+
+.float {
+	@extend %clearfix;
+
+	&__left{
+		float: left;
+	}
+	%__right{
+		float: right;
+	}
+}
+
+.align {
+	&__left{
+		text-align: left;
+	}
+	&__right{
+		text-align: right;
+	}
+}
+
+body{
+	@include mq($until: tablet) { 
+		padding-bottom: 9.5vh;
+	}
+}

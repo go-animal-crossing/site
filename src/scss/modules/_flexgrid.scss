@@ -1,0 +1,32 @@
+.grid,
+.grid_always{
+	width: auto;
+	
+	&__item{
+
+		@include mq($until: mobile) {
+			display: block;
+		}
+	}
+
+	@include mq($from: tablet) {        
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		align-content: flex-start;
+	}
+	@include mq($until: mobile) {
+        display: block;
+    }
+}
+
+.grid_always{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: flex-start;
+}

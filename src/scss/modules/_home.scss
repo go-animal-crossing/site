@@ -1,0 +1,66 @@
+.home
+{
+    .available-grid
+    {
+        flex-wrap: wrap;
+        display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+        align-content: flex-start;
+        
+        .grid__item
+        {
+            text-align: center;
+            width: 12.5%;
+            height: 18vh;
+            padding: $paddingInner / 2;
+            line-height: 1.4em;
+            @include fontSize($copyFontSize * 0.8);
+            border-bottom: 2px dotted $headerColour;
+            
+            @include mq($until: tablet) {
+                width:50%;
+                height: 28vh;
+
+            }
+            
+            img{
+                max-width: 100%;
+                width: auto;
+                height: 70%;
+            }
+            strong{
+                display: block;
+            }
+            
+        }
+    }
+
+    .welcome-block{
+        margin-bottom: $margin * 2;
+    }
+    .welcome{
+
+    }
+    .welcome-sub{
+        margin:0;
+        padding:0;
+        padding-left:20%;
+        text-transform: none;
+        line-height: 1em;
+        @include fontSize($h1FontSize *0.4);	
+	    @include mq($from: tablet) {
+            @include fontSize($h1FontSize * 0.7);
+	    }
+        
+    }
+}
+
+
+.critter-tile{
+    position: relative;
+}
+
+
+

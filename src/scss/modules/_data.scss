@@ -1,0 +1,117 @@
+.data {
+    padding: $paddingInner / 2;
+    background: $paleColour;    
+
+    &__row{
+        @extend %clearfix;
+        display: block;
+        border-bottom: 2px dotted $headerColour;
+        padding: $paddingInner / 2 0;
+
+        &:last-child{
+            border-bottom: 0;
+        }
+        
+
+        em,
+        i{
+            font-style: normal;
+        }
+        i {
+            display: none;
+            @include mq($from: tablet) {
+                display: inline;
+            }
+        }
+        
+
+        &__key,
+        &__value {
+            padding: 0 $paddingInner / 2;
+            display: inline-block;            
+        }
+        &__key {
+            font-weight: 700;
+            width: 45%;
+
+        }
+        &__value {
+            width: 53%;
+        }
+
+    }
+}
+
+
+.data-table {
+    margin-top: $margin / 2;
+    width:100%;
+    tr{
+        border-bottom: 2px dotted $headerColour;        
+    }
+    thead tr{
+        border-style: solid;
+    }
+    tbody tr:last-child{
+        border-bottom: 0;
+    }
+
+    th{
+        padding: $paddingInner / 2;
+        vertical-align: middle;
+        cursor: pointer;
+        &.sorttable_nosort{
+            cursor: auto;
+        }
+    }
+    td
+    {
+        position: relative;
+        padding: $paddingInner / 4 $paddingInner / 2;
+        vertical-align: middle;
+        &.price {
+            text-align: right;            
+        }    
+    }
+
+
+    .can-hide {
+        @include mq($until: tablet) {
+            display: none;
+        }
+    }
+
+    @include mq($until: tablet) {
+        @include fontSize($copyFontSize * 0.8);
+    }
+
+    // double line cells - availablity
+    .double 
+    {
+        span{
+            display: block;            
+            border-bottom: 2px dotted $headerColourRGBA;
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .icon{
+        height: 24px;
+        @include mq($from: tablet) {
+            height: 40px;
+        }
+        @include mq($from: desktop) {
+            height: 90px;
+        }
+    }
+}
+
+.meta{
+    max-width: 100%;
+    width: auto;
+    @include mq($from: tablet) {
+        max-width: 55%;
+    }
+}

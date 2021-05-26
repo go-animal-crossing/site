@@ -1,0 +1,149 @@
+.navigation {
+    width: 100%;    
+    padding: 0 $paddingInner / 2;
+    background: $contrast;
+    align-items: center;
+    height: 7vh;
+
+    
+    a{
+        text-decoration: none;
+        border-color: transparent;
+        border-bottom: 0.8vh solid transparent;
+        height: 7vh;
+        padding: 2vh 0 0 0;    
+        display: inline-block;
+        &:first-child span{
+            border-width:0;
+        }    
+    }
+    span{
+        position: relative;
+        display: inline-block;
+        height: 2.9vh;   
+        padding: 0 $paddingInner;
+        text-decoration: none;
+        border-left: 1px solid $headerColourRGBA;
+        text-align: center;    
+    }
+
+    &.head {
+        a.section {
+            @include mq($until: tablet) {
+                display: none;
+            }           
+        }
+    }
+
+    
+    #home {
+        padding-right: $paddingInner * 2;
+        
+        span{
+            border-width:0;  
+            padding-left: $paddingInner/4;   
+        }
+        @include mq($until: tablet) {  
+            padding-top: 1.4vh;           
+            float :left;
+            padding-left: $paddingInner * 0.7;
+        }
+    }    
+    
+    #logo {
+        padding-top: 0.4vh;         
+        img{      
+            height: 6vh;
+        }
+
+        @include mq($until: tablet) {  
+            padding-top: 0.5vh;           
+            float :left;
+        } 
+        
+    }
+}
+
+body.type-sea-creatures .navigation a.section-sea,
+body.type-fish .navigation a.section-fish,
+body.type-bugs .navigation a.section-bugs,
+body.type-new .navigation a.section-new,
+body.type-leaving .navigation a.section-leaving
+{
+    border-color: $accentColour;
+}
+
+#footer-navigation{
+    height: 9vh;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    box-shadow: 0px -2px 7px -1px $blackRGBA;
+    a{        
+        height: 9vh;        
+        display:inline-block;   
+        padding: 2vh 0 0 0; 
+        border-top-width: 0.8vh;
+        border-top-style: solid;
+        border-bottom-width: 0;
+    }
+    span {
+        display:block;
+        height: 4vh;
+        padding: 0 $paddingInner/1.8 0 $paddingInner/1.8;
+        @include fontSize($copyFontSize * 0.8);
+    }
+    @include mq($from: tablet) {  
+        display: none;
+    } 
+    
+}
+
+
+.sharing {
+    justify-content: flex-end;
+    top:0;
+    right: 1%;
+    position: absolute;
+    width:80px;
+    height: 7vh;
+    color: $headerColour;
+    a{
+        width:40px;
+        text-decoration: none;        
+        height: 7vh;
+        padding: 0 ;
+        display: inline-block;
+        span{
+            visibility: hidden;
+        }
+    }
+    .my-island{
+        background: url('/assets/ui/icons/edit-2.svg') no-repeat center center;
+    }
+    .shared-island{
+        background: url('/assets/ui/icons/share-2.svg') no-repeat center center;
+    }
+    .hidden{
+        display: none;
+    }
+    
+}
+
+
+.to-top-nav{
+    position: fixed;
+    width: 24px;
+    height: 9vh;
+    bottom: 0;
+    right: $paddingInner / 2;
+    z-index: 10;
+    a{
+        color: $headerColour;
+        display: block;
+        height: 9vh;
+        width: 24px;
+        background: url('/assets/ui/icons/arrow-up-circle.svg') no-repeat center center;
+        text-indent: -999999em;
+    }
+}

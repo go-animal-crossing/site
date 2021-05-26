@@ -1,0 +1,60 @@
+.navigation-inner {
+    display: inline-block;
+    padding: 0;
+    background: $accentColour;
+    color: $white;
+    @include fontSize($copyFontSize);
+    
+
+    a{
+        padding: $paddingInner/2;
+        display: inline-block;
+        text-decoration: none;
+        &:hover{
+            color: $white;
+        }
+
+        &.hemisphere        
+        {
+            display: none;
+            @include mq($from: tablet) {
+                display: inline-block;
+            }
+
+            @include fontSize($copyFontSize*0.75);
+            text-decoration: underline;
+            padding: $paddingInner/2 0;
+        }
+        &.hemisphere-s
+        {
+            padding-right: $paddingInner/2;
+        }
+
+        &.section
+        {
+            border-left: 1px solid $paleBlue;
+            padding-right: $paddingInner/2;
+            
+        }
+        &.first{
+            border-left: none;
+        }
+    }
+
+}
+
+.page-nav{
+    padding: $paddingInner 0;
+    h3.grid__item{
+        @include mq($until: tablet) {  
+            display: none;
+        } 
+        font-weight: 700;
+        text-decoration: none;
+        @include fontSize($copyFontSize*0.8);
+        margin:0;
+        padding-top: $paddingInner/2;
+        padding-right: $paddingInner/2;
+    }
+   
+}

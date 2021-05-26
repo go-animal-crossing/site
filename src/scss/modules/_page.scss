@@ -1,0 +1,185 @@
+.page
+{
+    width:96vw;
+    margin:5vh auto;
+    @include mq($from: desktop) {
+        width:80vw;
+    }
+    &__text {
+        background: $contrast;
+        padding: $paddingInner / 2;
+        position: relative;
+        @include mq($from: tablet) {
+            padding: $paddingInner;
+        }
+    }
+
+    &__grid {
+        &__img{         
+            @include mq($from: tablet) { 
+                order: 2;
+            }
+            img {
+                width: auto;
+                max-width:100%;
+                height: auto;
+                max-height: 380px;
+                margin: auto 0;
+                display: inline-block;
+
+            }
+        }
+
+        &__contents {
+            padding: 0;                   
+            width: 100%;
+
+            @include mq($from: tablet) {  
+                padding-right: $paddingInner; 
+                width: auto;
+                min-width: 55%;
+                max-width: 70%;
+            }            
+        }
+    }
+
+    h2,
+    h3 {
+        margin: $copyMarginBottom 0;
+        
+        span {
+            color: $accentColour;
+            padding: 0 $paddingInner/2;
+        }
+    }
+
+    .phrases {
+        padding: $paddingInner / 2;        
+
+        blockquote {
+            margin-bottom: $margin * 2;
+
+            @include mq($from: tablet) {  
+                padding-left: $paddingInner;                
+                align-items: flex-start;
+            }
+        }
+        img {
+            max-width: 100px;
+            
+        }
+        p {
+            @include mq($from: tablet) {  
+                padding-left: $paddingInner;
+            }
+        }        
+    }
+
+    
+
+}
+
+.links
+{
+    padding: $paddingInner;
+    margin: 0 $paddingInner $paddingInner $paddingInner;
+    border-bottom: 2px dashed $accentColour;
+    border-top: 2px dashed $accentColour; 
+    @include mq($until: tablet) {  
+        padding: $paddingInner /2;
+        margin: 0 $paddingInner/2 $paddingInner/2 $paddingInner/2;
+    }   
+}
+
+.category
+{
+    padding-bottom: $paddingInner / 2;
+}
+
+/** SHARING PAGES **/
+
+.page.shared.loading,
+.page.shared.error{
+    
+    &:after{
+        top:0;
+        left:0;
+        padding: 45vh 0 0 0;
+        text-align: center;
+        content: "Loading island...";
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: $overlayBackground;
+        color: $white;
+        @include fontSize($h1FontSize *0.6);
+        z-index: 100;
+    }
+}
+
+.page.shared.error:after{
+    content: "Error loading shared island!";
+}
+
+.island-form-intro p{
+    padding-right: $paddingInner / 2;
+}
+.island-form{
+    padding: 0 $paddingInner / 2 ;
+    @include mq($until: tablet) {
+        padding: $paddingInner / 2 0;
+    }
+
+}
+
+#share-main{
+    display: inline-block;
+    @include mq($until: tablet) {
+        display: none;
+    }
+}
+#share-mobile{
+    margin-top: $margin;
+    display: none;
+    @include mq($until: tablet) {
+        display: inline-block;
+    }
+}
+
+.shared-block{
+    background-image: url('/assets/ui/others/tree.png');
+    background-repeat: no-repeat;
+    background-position: 96% 94%;
+    @include mq($until: tablet) {
+        background-image: none;
+    }
+}
+
+h1#caught,
+h1#missing
+{
+    font-family: 'Oswald', sans-serif;
+    @include fontSize($h1FontSize *0.5);	
+	@include mq($from: tablet) {
+		@include fontSize($h1FontSize *0.5);	
+	}
+}
+
+.ctas
+{
+    margin-top: $margin;
+    .button{
+        margin-right: $margin / 2;
+    }
+}
+.to-catch{
+    margin-bottom: $margin * 2;
+}
+
+p.share-link{
+    margin-top: $margin / 2;
+}
+
+fieldset.fruit{
+    min-width: 90px;
+}

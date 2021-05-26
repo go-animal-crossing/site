@@ -1,0 +1,34 @@
+.monthly-data
+{
+    margin-top: $margin*2;    
+    border-top: 2px dotted $headerColourRGBA;
+    
+    .block
+    {
+        padding: $paddingInner 0;
+        border-bottom: 2px dotted $headerColour;
+        h3,
+        p{
+            margin: 0; 
+        }
+        h3
+        {
+            color: $accentColour;
+        }
+    }
+}
+
+
+
+.monthly
+{
+    padding: $paddingInner / 4 0;
+
+
+    .month{
+        padding: $paddingInner/2;
+        display: inline-block;
+    }
+
+   
+}

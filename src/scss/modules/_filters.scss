@@ -1,0 +1,48 @@
+.timed
+{
+    display: none
+}
+
+a.timed-active
+{
+    display: block;
+}
+
+.filters .navigation-inner{
+    background: $highlightColour;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    a{
+        border-right: 2px solid $white;
+
+        &:hover{
+            color: $headerColourRGBA;
+        }
+        &.selected{
+            color: $headerColour;
+            font-weight: 700;
+        }
+
+        &:last-of-type{
+            border-right-width: 0;
+        }
+    }
+   
+}
+
+.caught{
+    img{
+        opacity: 0.3;
+    }
+    &:after {
+        content: "✔";
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        width: 30%;
+        color: $highlightColour;
+        line-height: 1em;
+        @include fontSize($h1FontSize / 2);
+        opacity: 1;
+    }
+}

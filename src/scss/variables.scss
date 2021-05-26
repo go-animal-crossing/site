@@ -1,0 +1,50 @@
+/**
+ * Colours
+ */
+ 	
+$paleColour: rgb(222,217,200); //body 
+$highlightColour: rgb(76,193,80); //logo
+$highlightColourRGBA: rgba(76,193,80, 0.7);
+$headerColour: rgb(65, 53, 35);
+$headerColourRGBA: rgba(65, 53, 35, 0.5);
+$overlayBackground: rgba(0, 0, 0, 0.9);
+$accentColour: rgb(4,147,169); // bold / strong etc
+$contrast: rgb(236,230,209);
+$contrastRGBA: rgba(236,230,209	, 0.8);
+$paleBlue: rgb(181, 227, 255);
+$newColour: rgb(34,171,51);
+$leavingColour: rgb(255, 143, 38);
+$white:rgb(255,255,255);
+$blackRGBA: rgba(0,0,0,0.5);
+$shadowColour: rgba(0,0,0,0.1);
+/**
+ * Container padding
+ * - top level container such as featured-services is paddingOuter
+ * - inner containers such as hero / featured service text is paddingInner
+ */
+$paddingOuter: 20px;
+$paddingInner: 20px;
+$margin: 20px;
+
+
+$boxShadowOuterBottom: 0px 12px 26px -6px $shadowColour;
+/**
+ * Body copy variables
+ */
+$copyMarginBottom: 0.8em; 
+$copyFontSize: 18px;
+$copyLineHeight: 1.6em;
+
+/**
+ * Headings
+ */
+$h1FontSize: 78px;
+$h2FontSize: 18px;
+$h3FontSize: 18px;
+$h4FontSize: 18px;
+/**
+ * Featured Items
+ */
+
+$contentContainerWidth: 80%;;
+$contentContainerMaxWidth: 850px;
