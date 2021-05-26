@@ -8,4 +8,4 @@ assets/images/**
 assets/css/**
 assets/js/**
 # modules
-node_modules**
+node_modules
