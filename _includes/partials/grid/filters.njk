@@ -1,0 +1,32 @@
+
+{% set showType = showType %}
+{% set showHemisphere = showHemisphere %}
+{% set showIs = showIs %}
+
+
+<section class='grid page-nav filters'>
+    <h3 class='grid__item'>Filter by:</h3>
+    {% if showType %}
+    <div class='grid grid__item navigation-inner rounded filters-by-type'>
+        <a href="#" data-filter-group="f1" data-filter-key="type" data-filter-value="" class='grid__item filter__trigger selected f1' >All</a>
+        <a href="#" data-filter-group="f1" data-filter-key="type" data-filter-value="bugs" class='grid__item filter__trigger f1' >Bugs</a>
+        <a href="#" data-filter-group="f1" data-filter-key="type" data-filter-value="fish" class='grid__item filter__trigger f1' >Fish</a>
+        <a href="#" data-filter-group="f1" data-filter-key="type" data-filter-value="sea-creatures" class='grid__item filter__trigger f1' >Sea Creatures</a>
+    </div>
+    {% endif -%}
+    {% if showHemisphere %}
+    <div class='grid grid__item navigation-inner rounded filters'>
+        <a href="#" data-filter-group="f2" data-filter-key="hemisphere" data-filter-value="" class='grid__item filter__trigger selected f2' >Both</a>
+        <a href="#" data-filter-group="f2" data-filter-key="hemisphere" data-filter-value="northern" class='grid__item filter__trigger f2' >Northern</a>
+        <a href="#" data-filter-group="f2" data-filter-key="hemisphere" data-filter-value="southern"class='grid__item filter__trigger f2' >Southern</a>                
+    </div>
+    {% endif -%}
+    {% if showIs %}
+    <div class='grid grid__item navigation-inner rounded filters'>
+        <a href="#" data-filter-group="f3" data-filter-key="is" data-filter-value="" class='grid__item filter__trigger selected f3' >All</a>
+        <a href="#" data-filter-group="f3" data-filter-key="is" data-filter-value="new" class='grid__item filter__trigger f3' >New</a>
+        <a href="#" data-filter-group="f3" data-filter-key="is" data-filter-value="leaving"class='grid__item filter__trigger f3' >Leaving</a>                
+    </div>
+    {% endif -%}
+    
+</section>

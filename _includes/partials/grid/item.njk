@@ -1,0 +1,40 @@
+{% set item = item -%}
+{% set month = "" | currentMonth -%}
+{% set availableNorth = item | is("available", month, "northern") -%}
+{% set availableSouth = item | is("available", month, "southern") -%}
+{% set new = item | is("new", month) -%}
+{% set newNorth = item | is("new", month, "northern") -%}
+{% set newSouth = item | is("new", month, "southern") -%}
+{% set leaving = item | is("leaving", month) -%}
+{% set leavingNorth = item | is("leaving", month, "northern") -%}
+{% set leavingSouth = item | is("leaving", month, "southern") -%}
+
+<a  href='{{ item | iUrl }}'
+    class='
+    grid__item
+    filter__item
+    critter-tile
+    type-{{ item.attributes.type.slug }}
+    hemi-northern-{{ availableNorth }}
+    hemi-southern-{{ availableSouth }}
+    is-new-{{ new }}
+    is-new-northern-{{ newNorth }}
+    is-new-southern-{{ newSouth }}
+    is-leaving-{{ leaving }}
+    is-leaving-northern-{{ leavingNorth }}
+    is-leaving-southern-{{ leavingSouth }}
+    '
+    data-current-month="{{ month }}"
+    data-northern="{{ availableNorth }}"
+    data-southern="{{ availableSouth }}"
+    data-is-new-northern="{{ newNorth }}"
+    data-is-new-southern="{{ newSouth }}"
+    data-is-leaving-northern="{{ leavingNorth }}"
+    data-is-leaving-southern="{{ leavingSouth }}"
+    data-type='{{ item.attributes.type.slug }}'
+    data-id='{{ item.id }}'
+>
+    {% include "_includes/partials/critter/is.njk" -%}
+    {% include "_includes/partials/critter/image.njk" -%}
+    <strong>{{ item | iTitle }}</strong>
+</a>

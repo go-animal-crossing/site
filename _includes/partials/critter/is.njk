@@ -1,0 +1,35 @@
+{% set newNorth = item | is("new", month, "northern") -%}
+{% set newSouth = item | is("new", month, "southern") -%}
+{% set leavingNorth = item | is("leaving", month, "northern") -%}
+{% set leavingSouth = item | is("leaving", month, "southern") -%}
+
+
+{% if newNorth == "1" %}
+<span class='is-new is-n is' title="New this month for the northern hemisphere">
+    <img loading="lazy" src="/assets/ui/icons/star.svg" alt="New this month for the northern hemisphere" />
+</span>
+<p class='is-new is-n is'>New for the Northen Hemisphere</p>
+{% endif -%}
+
+{% if newSouth == "1" %}
+<span class='is-new is-s is' title="New this month for the southern hemisphere">
+    <img loading="lazy" src="/assets/ui/icons/star.svg" alt="New this month for the southern hemisphere" />
+</span>
+<p class='is-new is-s is'>New for the Southern Hemisphere</p>
+{% endif -%}
+
+
+{% if leavingNorth == "1" %}
+<span class='is-leaving is-n is' title="Last month for the northern hemisphere">
+    <img loading="lazy" src="/assets/ui/icons/alert-triangle.svg" alt="Last month for the northern hemisphere" />
+</span>
+<p class='is-leaving is-n is'>Last month for the Northen Hemisphere</p>
+{% endif -%}
+
+{% if leavingSouth == "1" %}
+    <span class='is-leaving is-s is' title="Last month for the southern hemisphere">
+        <img loading="lazy" src="/assets/ui/icons/alert-triangle.svg" alt="Last month for the southern hemisphere" />
+    </span>
+    <p class='is-leaving is-s is'>Last month for the Southern Hemisphere</p>
+{% endif -%}
+

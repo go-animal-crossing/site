@@ -1,0 +1,28 @@
+{% set prefix = "" %}
+{% if type != "mixed" %}
+{% set prefix = "/" + type %}
+{% endif -%}
+
+
+<section class='grid page-nav'>
+    <h3 class='grid__item'>Try these pages:</h3>
+    <nav class='grid grid__item navigation-inner rounded'>
+        <span class='grid__item'>
+            <a href='{{ prefix }}/new/' class='section first' title='New'>New</a>
+            <a href='{{ prefix }}/new/northern' class='hemisphere hemisphere-n' title="Northern Hemisphere">N</a>
+            <a href='{{ prefix }}/new/southern' class='hemisphere hemisphere-s' title="Southern Hemisphere">S</a>
+            
+        </span>
+        <span class='grid__item'>
+            <a href='{{ prefix }}/leaving/' class='section' title='Leaving'>Leaving</a>
+            <a href='{{ prefix }}/leaving/northern' class='hemisphere hemisphere-n' title="Northern Hemisphere">N</a> 
+            <a href='{{ prefix }}/leaving/southern' class='hemisphere hemisphere-s' title="Southern Hemisphere">S</a>
+        </span>
+        <span class='grid__item'>
+            <a href='{{ prefix }}/available/' class='section' title='Available'>Available</a>
+            <a href='{{ prefix }}/available/northern' class='hemisphere hemisphere-n' title="Northern Hemisphere">N</a>
+            <a href='{{ prefix }}/available/southern' class='hemisphere hemisphere-s' title="Southern Hemisphere">S</a>
+        </span>
+    </nav>
+</section>
+

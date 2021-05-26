@@ -1,0 +1,32 @@
+<section class="page list home" >
+    <section class='page__text rounded grid welcome-block'>
+        <div class='grid__item'>
+            <h1 class='welcome'>Welcome...</h1>
+            <h2 class='welcome-sub title'>...come</h2>
+            <p>The latest version of Animal Crossing has been a top selling hit since its release & everyone has been catching those critters, earning that golden tool set and trying to complete the Critterpedia.</p>
+            <p>Not all the critters are available all the time, so this site provides the where & when - but leaves the how up to you!</p>
+            <a href="#now" class='button rounded'>Catch them now</a>
+
+        </div>
+        <div class='grid__item'>
+            <img src="/assets/ui/npc-images/timmy-tommy.png" alt='Timmy and Tommy from Animal Crossing: New Horizons'>
+        </div>
+    </section>
+    <div class='page__text rounded' >
+        <h1 id="now">Here is what you can catch now!</h1>        
+        <p>Here you can find all the <a href='/fish/'>fish</a>, <a href='/bugs/'>bugs</a> and <a href='/sea-creatures/'>sea creatures</a> that you can catch in <strong>Animal Crossing: New Horizons</strong> right now!</p>
+        <p>Use the filters (the green blocks) to switch between types & hemisphere.</p>
+
+        {% set showType = true %}
+        {% set showHemisphere = true %}
+        {% set showIs = true %}
+        {% include "_includes/partials/grid/filters.njk" -%}
+
+        <script>_globalDateFilter = true;</script>
+        
+        {% set gridItems = critters.sorted %}
+        {% include "_includes/partials/grid/grid.njk" -%}
+        <!-- end grid -->
+    </div>
+
+</section>

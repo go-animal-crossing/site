@@ -1,0 +1,10 @@
+{% set gridItems = gridItems %}
+
+<section class='grid available-grid show-all-types'>
+<!-- gridLength: {{ gridItems | length }} -->
+
+    {% for g in gridItems | list %}
+        {% set item = g %}
+        {% include "_includes/partials/grid/item.njk" -%}
+    {% endfor %}
+</section>

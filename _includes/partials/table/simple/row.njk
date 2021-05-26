@@ -1,0 +1,25 @@
+<tr 
+    data-id="{{ item.id }}"
+    class=""
+>
+    <td>
+        {% include "_includes/partials/critter/is.njk" -%}
+        <a href="{{ item | iUrl }}">{% include "_includes/partials/critter/image.njk" -%}</a>
+    </td>
+
+    <th><a href='{{ item | iUrl }}' title='{{ item | iTitle }}'>{{ item | iTitle }}</a></th>
+    <td class='can-hide'>{{ item | iTypeTitle }}</td>    
+
+  
+    {% if item.attributes.availability.months.always %}
+    <td>All Year</td>
+    {% else %}
+    <td class="double">
+        <span class='is-n'>{{ item.attributes.availability.months.northern.text }}</span>
+        <span class='is-s'>{{ item.attributes.availability.months.southern.text }}</span>
+    </td>
+    {% endif -%}
+
+    <td class='price can-hide'>{{ item.attributes.prices.store }}</td>
+
+</tr>

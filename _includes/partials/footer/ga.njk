@@ -1,0 +1,14 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-927511-11"></script>
+<script>
+_sharePage = document.querySelector('.page.shared');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+// append the url fragment
+gtag('config', 'UA-927511-11', { 
+    'page_path': window.location.pathname + ((_sharePage) ? window.location.hash : ""),
+    'page_title': document.title
+});
+
+</script>

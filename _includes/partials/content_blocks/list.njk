@@ -1,0 +1,46 @@
+{% set filterTag = filter_by_tag | resolveTag %}
+{% set listItems = critters.sorted | filterByTag(filterTag) %}
+{% set len = listItems | length %}
+<section 
+    class="page list" 
+    data-type="{{ type }}"
+    data-filter-by="{{ filterTag }}"
+    data-filter-length="{{ length }}"
+    data-anch-type='{% if item %}{{ item | iTypeSlug }}{% endif %}'
+>
+    <div class='page__text rounded'>
+    {% if len > 0%}
+        <h1>{{ title }}</h1>       
+
+        {% include "_includes/partials/navigation/inner.njk" -%}
+        {% include "_includes/partials/navigation/related.njk" -%}
+        {% include "_includes/partials/extra/hemisphere.njk" -%}
+
+        <table class='data data-table rounded sortable'>
+            <thead>
+                {% set headerItem = listItems[0] %}
+                {% if type == "mixed" %}
+                    {% include "_includes/partials/table/simple/header.njk" -%}
+                {% else %}
+                    {% include "_includes/partials/table/header.njk" -%}
+                {% endif -%}
+            </thead>
+            <tbody>
+                {% for i in listItems | list %}
+                    {% set item = i %}
+                    {% if type == "mixed" %}
+                        {% include "_includes/partials/table/simple/row.njk" -%}
+                    {% else %}
+                        {% include "_includes/partials/table/row.njk" -%}
+                    
+                    {% endif -%}
+                    
+                {% endfor -%}
+            </tbody>
+        </table>
+
+        {% include "_includes/partials/navigation/months.njk" -%}
+
+    {% endif -%}
+    </div>
+</section>  

@@ -1,0 +1,49 @@
+{% set prefix = "" %}
+{% set suffix = "" %}
+{% if type != "mixed" %}
+{% set prefix = type + "/" %}
+{% endif -%}
+{% if hemisphere %}
+{% set suffix =  "/" + hemisphere %}
+{% endif -%}
+
+
+<section class='monthly-data' id="month">
+    <div class='block'>
+        <h3>What's new</h3>
+        <p>View lists of whats new for each hemisphere per month.</p>
+        <section class='grid page-nav monthly'>
+            <nav class='grid grid__item monthly-navigation'>        
+            {% for i in range(0, 12) %}
+               <a href='/new/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="New in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+            {% endfor -%}
+            </nav>
+        </section>
+    </div>
+
+    <div class='block'>
+        <h3>What's leaving</h3>
+        <p>Check to see when your last chance to catch that critter is!</p>
+        <section class='grid page-nav monthly'>
+            <nav class='grid grid__item monthly-navigation'>        
+            {% for i in range(0, 12) %}
+               <a href='/leaving/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Leaving in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+            {% endfor -%}
+            </nav>
+        </section>
+    </div>
+
+    <div class='block'>
+        <h3>What's available</h3>
+        <p>Find out what you can catch each month!</p>
+        <section class='grid page-nav monthly'>
+            <nav class='grid grid__item monthly-navigation'>        
+            {% for i in range(0, 12) %}
+               <a href='/available/{{ prefix }}{{ i | monthString("long") | lower }}{{ suffix }}' class='grid__item month' title="Available in {{ i | monthString('long') }}">{{ i | monthString("short") }}</a>
+            {% endfor -%}
+            </nav>
+        </section>
+    </div>
+
+    
+</section>

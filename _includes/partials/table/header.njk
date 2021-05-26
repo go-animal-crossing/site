@@ -1,0 +1,28 @@
+<tr>
+    <th class='sorttable_nosort'></th>
+    <th>Name<span id="sorttable_sortfwdind">&nbsp;▾</span></th>   
+
+    {% if headerItem.has.location %}
+    <th class='can-hide'>Location</th>        
+    {% endif -%}
+    
+    {% if headerItem.has.rarity %}
+    <th class='can-hide'>Rarity</th>        
+    {% endif -%} 
+
+    {% if headerItem.has.availabilty %}
+    <th class='sorttable_nosort'>Availability</th>    
+    {% endif -%}
+
+    {% if headerItem.has.shadow %}
+    <td class='can-hide'>Shadow</td>
+    {% endif -%}
+
+    {% if headerItem.has.speed %}
+    <td class='can-hide'>Speed</td>
+    {% endif -%}
+
+    {% if headerItem.has.price %}
+    <td class='price can-hide'>Price</td>
+    {% endif -%}
+</tr>
