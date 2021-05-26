@@ -2,7 +2,7 @@
 {% if type != "mixed" %}
 {% set prefix = "/" + type %}
 {% endif -%}
-{% if listing %}
+{% if listing and listing != type %}
 {% set prefix = prefix + "/" + listing %}
 {% endif -%}
 
