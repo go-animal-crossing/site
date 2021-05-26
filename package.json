@@ -1,0 +1,33 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Website using the generated posts and data",
+  "scripts": {
+    "sass": "sass --style=compressed src/scss/styles.scss ./assets/css/styles.css",
+    "js": "cat ./src/js/_vendors/*.js > ./assets/js/app.js && cat ./src/js/*.js >> ./assets/js/app.js && terser --comments  --keep-classnames --keep-fnames -o ./assets/js/app.min.js ./assets/js/app.js",
+    "build": "npm run sass && npm run js && eleventy",
+    "debug": "DEBUG=* eleventy",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run sass -- --watch",
+    "watch:js": "npm run js -- --watch",
+    "serve": "npm-run-all sass js --parallel watch:*",
+    "start": "npm run sass && npm run js && eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/go-animal-crossing/site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "homepage": "https://github.com/go-animal-crossing/site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "luxon": "^1.26.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.34.0",
+    "terser": "^5.7.0"
+  }
+}

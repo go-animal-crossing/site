@@ -1,0 +1,9 @@
+.DS_Store
+# generates site folder
+_site**
+# data file
+_data/critters.json
+# build files
+
+# modules
+node_modules**
