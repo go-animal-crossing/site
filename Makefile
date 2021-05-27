@@ -22,6 +22,7 @@ all:
 .PHONY: prep
 prep:
 	rm -Rf ./_site
+	mkdir -p ./_site
 	rm -Rf ./_posts
 	rm -Rf ./_binarys
 	rm -Rf ./assets/images
@@ -68,13 +69,14 @@ runBinarys:
 
 .PHONY: mover
 mover:
+	mv -f _source/converted/out.json ./_data/critters.json
 	mv -f _source/images ./assets/images
 	mv -f _source/posts/*  ./_posts/
 
 .PHONY: imagecompression
 imagecompression:
 	echo $(TINYPNG_KEY)
-	./compressor compress -k "$(TINYPNG_KEY)" -e png -r ./_site/images || true
+	./compressor compress -k "$(TINYPNG_KEY)" -e png -r ./assets/images || true
 
 
 .PHONY: generate
