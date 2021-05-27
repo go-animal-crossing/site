@@ -3,7 +3,7 @@ ARCH = $(shell uname -m)
 DOWNLOADER = https://github.com/go-animal-crossing/download/releases/latest/download/download_$(OS)_$(ARCH).tar.gz
 CONVERTOR = https://github.com/go-animal-crossing/convert/releases/latest/download/convert_$(OS)_$(ARCH).tar.gz
 POSTER = https://github.com/go-animal-crossing/posts/releases/latest/download/posts_$(OS)_$(ARCH).tar.gz
-COMPRESSOR = https://github.com/tarampampam/tinifier/releases/download/v3.0.1/tinifier-darwin-amd64
+COMPRESSOR = https://github.com/tarampampam/tinifier/releases/download/v3.0.1/tinifier-${OS}-amd64
 
 .PHONY: all
 all:
