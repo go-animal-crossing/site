@@ -9,5 +9,3 @@ assets/css/**
 assets/js/**
 # modules
 node_modules
-# post files
-_posts/**
