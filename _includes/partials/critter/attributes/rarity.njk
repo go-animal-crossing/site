@@ -1,0 +1,6 @@
+{% if item.has.rarity %}
+<li class="data__row">
+    <strong class='data__row__key align__left  key key__rarity key__rarity__{{ item.attributes.availability.rarity }}'>Rarity:</strong>
+    <span class="data__row__value align__right">{{ item.attributes.availability.rarity }}</span>
+</li>
+{% endif -%}

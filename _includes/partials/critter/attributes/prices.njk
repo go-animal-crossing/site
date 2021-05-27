@@ -1,0 +1,18 @@
+<li class="data__row">
+    <strong class="data__row__key align__left  key key__bells">Price:</strong>
+    <span class="data__row__value align__right">{{ item.attributes.prices.store }}</span>
+</li>
+
+{% if item.attributes.prices.flick %}
+<li class="data__row">
+    <strong class="data__row__key align__left  key key__bells">Price from Flick:</strong>
+    <span class="data__row__value align__right">{{ item.attributes.prices.flick }}</span>
+</li>
+{% endif -%}
+
+{% if item.attributes.prices.cj %}
+<li class="data__row">
+    <strong class="data__row__key align__left  key key__bells">Price from CJ:</strong>
+    <span class="data__row__value align__right">{{ item.attributes.prices.cj }}</span>
+</li>
+{% endif -%}

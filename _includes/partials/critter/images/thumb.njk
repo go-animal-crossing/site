@@ -1,4 +1,4 @@
-<img src='/assets/images/{{ item.attributes.images.thumb.local }}' 
+<img src='{{ item | iThumb }}' 
     alt='Image of {{ item | iTitle }}'
     title='{{ item | iTitle }}'
     loading="lazy" 

@@ -1,0 +1,39 @@
+<h2><span class='slab'>Where & When</span></h2>
+<ul class="data rounded">
+
+    <li class="data__row">
+        <strong class="data__row__key align__left  key key__location">Location:</strong>
+        <span class="data__row__value align__right">{{ item.attributes.availability.location }}</span>
+    </li>
+
+
+    {% if item.attributes.availability.months.always %}
+    <li class="data__row">
+        <strong class="data__row__key align__left  key key__time"><em>Northern</em><i> Hemisphere</i>:</strong>
+        <span class="data__row__value align__right">All Year</span>
+    </li>
+    <li class="data__row">    
+        <strong class="data__row__key align__left  key key__time"><em>Southern</em><i> Hemisphere</i>:</strong>
+        <span class="data__row__value align__right">All Year</span>
+    </li>
+    {% else %}
+    <li class="data__row">
+        <strong class="data__row__key align__left  key key__time"><em>Northern</em><i> Hemisphere</i>:</strong>
+        <span class="data__row__value align__right">{{ item.attributes.availability.months.northern.text }}</span>
+    </li>
+    <li class="data__row">
+        <strong class="data__row__key align__left  key key__time"><em>Southern</em><i> Hemisphere</i>:</strong>
+        <span class="data__row__value align__right">{{ item.attributes.availability.months.southern.text }}</span>
+    </li>
+    {% endif -%}
+
+    <li class="data__row">
+        <strong class="data__row__key align__left  key key__time"><em>Time</em><i> of Day</i>:</strong>
+        {% if item.attributes.availability.times.always %}
+        <span class="data__row__value align__right">All Day</span>
+        {% else %}
+        <span class="data__row__value align__right">{{ item.attributes.availability.times.text }}</span>
+        {% endif -%}
+    </li>
+
+</ul>

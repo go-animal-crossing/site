@@ -1,0 +1,29 @@
+<section class="page item" data-anch-item-id='{{ critter_id }}'>
+    <div class='page__text rounded'>
+        <h1>{{ item | iTitle }}</h1>
+        {% include "_includes/partials/critter/is.njk" -%}
+        
+        <p class="last">Found in <a href='/{{ critter_type.slug }}/'>{{ critter_type.title }}</a></p>
+        <div class='grid page__grid'>
+            {% include "_includes/partials/critter/images/main.njk" -%}
+
+            <section class="page__grid__contents grid__item">       
+                {% include "_includes/partials/critter/attributes/availability.njk" -%}                  
+
+                <ul class="data rounded">
+                    {% include "_includes/partials/critter/attributes/rarity.njk" -%}
+                    {% include "_includes/partials/critter/attributes/prices.njk" -%}
+                    {% include "_includes/partials/critter/attributes/shadow.njk" -%}
+                    {% include "_includes/partials/critter/attributes/speed.njk" -%}
+                </ul>           
+            </section>      
+        </div>
+
+        <section class='rounded phrases'>
+            {% include "_includes/partials/critter/phrases/museum.njk" -%}
+            {% include "_includes/partials/critter/phrases/captured.njk" -%}
+        </section>
+    </div>    
+    {% include "_includes/partials/critter/jsdata.njk" -%}
+    
+</section>

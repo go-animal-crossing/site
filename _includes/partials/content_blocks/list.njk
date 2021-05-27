@@ -38,9 +38,9 @@
                 {% endfor -%}
             </tbody>
         </table>
-
         {% include "_includes/partials/navigation/months.njk" -%}
-
+    {% else %}
+        {% include "_includes/partials/content_blocks/nodata.njk" -%}
     {% endif -%}
     </div>
 </section>  

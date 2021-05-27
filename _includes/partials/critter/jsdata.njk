@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "{{ item | iTitle }}",
+        "image": "{{ item | iImage }}",
+        "description": "{{ item | iMuseum }}",
+        "sku": "ACNH-{{ item | iTypeSlug }}-{{ item.id }}",
+        "mpn": "ACNH-{{ item | iTypeSlug }}-{{ item.id }}",
+        "brand": {
+            "@type": "Brand",
+            "name": "ACNH {{ item | iTypeTitle }}"
+        },
+        "category" : "{{ item | iTypeTitle }}",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "1"
+        }
+    }
+    </script>
