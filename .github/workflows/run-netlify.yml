@@ -6,40 +6,7 @@ on:
     - cron: '0 2 1 * *'
 
 jobs:
-  build:
+  call_web:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: '0'
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.33.0
-      id: create_tag
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        INITIAL_VERSION: 0.0.1
-        DEFAULT_BUMP: patch
-        RELEASE_BRANCHES: main
-        WITH_V: true
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ steps.create_tag.outputs.new_tag }}
-        release_name: ${{ steps.create_tag.outputs.new_tag }}
-        draft: false
-        prerelease: false
-    - name: goreleaser
-      uses: goreleaser/goreleaser-action@v2
-      with:
-        args: release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Create latest tag
-      run: |
-        git config --global user.email "runner@go-animal-crossing.com"
-        git config --global user.name "Github Action"      
-        git tag -fa "latest" -m "latest"
-        git push origin latest --force
+    - run: curl https://api.netlify.com/build_hooks/5f14903bd1a690c0d1fce14a
