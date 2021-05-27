@@ -75,8 +75,7 @@ mover:
 
 .PHONY: imagecompression
 imagecompression:
-	echo $(TINYPNG_KEY)
-	./compressor compress -k "$(TINYPNG_KEY)" -e png -r ./assets/images || true
+	./compressor compress -k "${TINYPNG_KEY}" -e png -r ./assets/images || true
 
 
 .PHONY: generate
