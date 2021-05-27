@@ -2,3 +2,6 @@
     base = "./"
     publish = "./_site/"
     command = "make -B all"
+
+[dev]
+    command = "make -B all"

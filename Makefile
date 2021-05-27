@@ -73,7 +73,8 @@ mover:
 
 .PHONY: imagecompression
 imagecompression:
-	echo "$(TINYPNG_KEY)"
+	echo $(TINYPNG_KEY)
+	./compressor compress -k "$(TINYPNG_KEY)" -e png -r ./_site/images || true
 
 
 .PHONY: generate
