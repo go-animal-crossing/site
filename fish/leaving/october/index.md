@@ -5,6 +5,6 @@ title: Leaving Fish in October
 body_class: fish
 filter_by_tag: "type_fish_leaving_october"
 type: "fish"
-listing: "fish"
+listing: "leaving"
 hemisphere: ""
 ---

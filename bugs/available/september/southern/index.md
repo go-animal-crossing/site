@@ -5,6 +5,6 @@ title: Available Bugs in September for the Southern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_available_september_southern"
 type: "bugs"
-listing: "bugs"
+listing: "available"
 hemisphere: "southern"
 ---

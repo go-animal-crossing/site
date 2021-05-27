@@ -5,6 +5,6 @@ title: Leaving Bugs in April for the Northern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_leaving_april_northern"
 type: "bugs"
-listing: "bugs"
+listing: "leaving"
 hemisphere: "northern"
 ---

@@ -5,6 +5,6 @@ title: Available Fish in June
 body_class: fish
 filter_by_tag: "type_fish_available_june"
 type: "fish"
-listing: "fish"
+listing: "available"
 hemisphere: ""
 ---

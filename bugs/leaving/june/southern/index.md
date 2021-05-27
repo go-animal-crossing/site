@@ -5,6 +5,6 @@ title: Leaving Bugs in June for the Southern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_leaving_june_southern"
 type: "bugs"
-listing: "bugs"
+listing: "leaving"
 hemisphere: "southern"
 ---

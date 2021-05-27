@@ -5,6 +5,6 @@ title: New Fish in June
 body_class: fish
 filter_by_tag: "type_fish_new_june"
 type: "fish"
-listing: "fish"
+listing: "new"
 hemisphere: ""
 ---

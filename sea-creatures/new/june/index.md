@@ -5,6 +5,6 @@ title: New Sea Creatures in June
 body_class: sea-creatures
 filter_by_tag: "type_seacreatures_new_june"
 type: "sea-creatures"
-listing: "sea-creatures"
+listing: "new"
 hemisphere: ""
 ---

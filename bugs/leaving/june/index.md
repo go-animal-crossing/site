@@ -5,6 +5,6 @@ title: Leaving Bugs in June
 body_class: bugs
 filter_by_tag: "type_bugs_leaving_june"
 type: "bugs"
-listing: "bugs"
+listing: "leaving"
 hemisphere: ""
 ---

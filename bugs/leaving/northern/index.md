@@ -5,6 +5,6 @@ title: Leaving Bugs in the Northern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_leaving_:current_month:_northern"
 type: "bugs"
-listing: "bugs"
+listing: "leaving"
 hemisphere: "northern"
 ---

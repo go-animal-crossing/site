@@ -5,6 +5,6 @@ title: Available Bugs in July
 body_class: bugs
 filter_by_tag: "type_bugs_available_july"
 type: "bugs"
-listing: "bugs"
+listing: "available"
 hemisphere: ""
 ---

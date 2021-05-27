@@ -5,6 +5,6 @@ title: Available Bugs in September
 body_class: bugs
 filter_by_tag: "type_bugs_available_september"
 type: "bugs"
-listing: "bugs"
+listing: "available"
 hemisphere: ""
 ---

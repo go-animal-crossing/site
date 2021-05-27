@@ -5,6 +5,6 @@ title: New Bugs in February for the Northern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_new_february_northern"
 type: "bugs"
-listing: "bugs"
+listing: "new"
 hemisphere: "northern"
 ---

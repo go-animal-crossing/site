@@ -5,6 +5,6 @@ title: New Bugs in December for the Southern Hemisphere
 body_class: bugs
 filter_by_tag: "type_bugs_new_december_southern"
 type: "bugs"
-listing: "bugs"
+listing: "new"
 hemisphere: "southern"
 ---
