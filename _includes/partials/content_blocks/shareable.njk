@@ -1,0 +1,61 @@
+
+<section class="page list home shareable" >
+    <section class='page__text rounded grid welcome-block'>
+        <div class='grid__item island-form-intro'>
+            <h1>My Island</h1>
+            <p>You can configure your island details here and share them with friends.</p>    
+            <a href="/shared/#" class='button share rounded' id="share-main" target="_blank">share my island</a>
+        </div>
+        <div class='grid__item island-form'>
+            <p>Fill in your island details in the fields below!</p>
+            <form class='island-data grid '>
+                <fieldset class='grid__item'>
+                    
+                    <label>Name:</label>
+                    <input type="text" name="name" value="" />
+                </fieldset>
+                <fieldset class='grid__item'>
+                    <label>Hemisphere:</label>
+                    <select name="hemisphere">
+                        <option value="">Pick..</option>
+                        <option value="Northern">North</option>
+                        <option value="Southern">South</option>
+                    </select>
+                </fieldset>
+                <fieldset class='grid__item fruit'>
+                    <label>Native Fruit:</label>
+                    <select name="nativeFruit">
+                        <option value="">Pick..</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Cherry">Cherry</option>
+                        <option value="Coconut">Coconut</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Pear">Pear</option>
+                        <option value="Peach">Peach</option>
+                    </select>
+                </fieldset>
+                <fieldset class='grid__item'>
+                    <label>Turnip Price:</label>
+                    <input type="text" name="turnipPrice" value="" />
+                </fieldset>
+                <fieldset class='grid__item'>
+                    <label>DODO Code:</label>
+                    <input type="text" name="dodo" value="" />
+                </fieldset>
+            </form>
+            <a href="/shared/#" class='button share rounded' id="share-mobile" target="_blank">share my island</a>
+        </div>
+        
+    </section>
+
+
+    <div class='page__text rounded mine' >
+        {% set showType = true %}
+        {% set showHemisphere = false %}
+        {% set showIs = false %}
+        {% set gridItems = critters.sorted %}
+        {% include "_includes/partials/grid/filters.njk" -%}
+        {% include "_includes/partials/grid/grid.njk" -%}
+    </div>
+
+</section>

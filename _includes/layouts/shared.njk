@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include "_includes/partials/headers/site.njk" %}
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  </head>
+  <body 
+    data-time-generated="{{ critters.time_generated }}"
+    class='type-{% if body_class %}{{body_class}}{% endif %}'
+  >  
+    <!-- Current page: {{ page.url | url }} -->
+    {% include "_includes/partials/headers/header.njk" -%}
+    {% include "_includes/partials/content_blocks/shared.njk" -%}
+    {% include "_includes/partials/footer/footer.njk" -%}
+    
+  </body>
+</html>

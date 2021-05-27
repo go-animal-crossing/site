@@ -1,0 +1,75 @@
+
+<section class="page list home shared loading" >
+    <section class='page__text rounded welcome-block shared-block'>
+        <h1 class=' island-form-intro island-name'><span class='slab'>Shared Island</span></h1>                    
+        <div class=' island-form'>
+            <p>This island configuration was shared with you.</p>
+            <h2><span class='slab'>Details:</span></h2>
+            <ul class='data rounded meta'>                
+                <li class='data__row island-hemisphere'>
+                    <strong class='data__row__key align__left  key key__hemisphere '>Hemisphere:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>
+                <li class='data__row island-nativeFruit'>
+                    <strong class='data__row__key align__left  key key__nativeFruit '>Native Fruit:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li> 
+                <li class='data__row island-turnipPrice'>
+                    <strong class='data__row__key align__left  key key__turnipPrice '>Turnip Price:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>  
+                <li class='data__row island-dodo'>
+                    <strong class='data__row__key align__left  key key__dodo '>DODO Code:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>  
+                <li class='data__row island-editedOn'>
+                    <strong class='data__row__key align__left  key key__editedOn '>Date:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>  
+
+            </ul>
+            <h2><span class='slab'>What's been caught:</span></h2>
+            <ul class='data rounded meta'>
+                <li class='data__row island-bugs'>
+                    <strong class='data__row__key align__left  key key__bugs '>Bugs:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>
+                <li class='data__row island-fish'>
+                    <strong class='data__row__key align__left  key key__fish '>Fish:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>
+                <li class='data__row island-sea-creatures'>
+                    <strong class='data__row__key align__left  key key__sea-creatures '>Sea Creatures:</strong>
+                    <span class='data__row__value align__right'></span>
+                </li>                
+            </ul>
+            <div class='ctas'>
+                <a href="#missing" class='button rounded'>Not caught yet</a>
+                <a href="#caught" class='button rounded'>Caught so far</a>
+                <a href="/mine/#" class='button rounded island-mine'>Edit</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class='page__text rounded to-catch' >
+        <h1 id="missing">Still to catch</h1>
+        <p class='share-link'><a href='/mine/#' class='island-mine'>Update your island here</a>
+        <div class='grid available-grid show-all-types list'><p class='missing-text'>Nothing missing... this island has it all!</p></div>
+    </div>
+
+    <div class='page__text rounded shared' >
+        <h1 id="caught">Caught so far</h1>
+        <p class='share-link'><a href='/mine/#' class='island-mine'>Update your island here</a>
+
+        {% set showType = true %}
+        {% set showHemisphere = false %}
+        {% set showIs = false %}
+        {% set gridItems = critters.sorted %}
+        {% include "_includes/partials/grid/filters.njk" -%}
+        {% include "_includes/partials/grid/grid.njk" -%}
+    </div>
+
+    
+
+</section>
