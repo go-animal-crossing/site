@@ -1,8 +1,6 @@
 const { DateTime } = require("luxon");
 const fs = require("fs");
 
-const pluginNavigation = require("@11ty/eleventy-navigation");
-
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -63,9 +61,7 @@ const is = (item, status, month, hemisphere, type) => {
 module.exports = function(eleventyConfig) {
   
 
-  // Add plugins
-  eleventyConfig.addPlugin(pluginNavigation);
-
+  // Add plugins  
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.setDataDeepMerge(true);
   

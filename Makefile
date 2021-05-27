@@ -16,6 +16,7 @@ all:
 	@${MAKE} mover
 	@${MAKE} imagecompression
 	@${MAKE} generate
+	@${MAKE} sitemap
 	@${MAKE} cleanup
 
 
@@ -81,6 +82,10 @@ imagecompression:
 .PHONY: generate
 generate:
 	npm run build
+
+.PHONY: sitemap
+sitemap:
+	./sitemap.sh
 
 .PHONY: cleanup
 cleanup:
