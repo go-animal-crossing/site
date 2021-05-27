@@ -9,3 +9,5 @@ assets/css/**
 assets/js/**
 # modules
 node_modules
+_source**
+_binarys**
