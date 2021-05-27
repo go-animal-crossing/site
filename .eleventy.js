@@ -37,7 +37,18 @@ const iTypeSlug = (item) => {
 const iTags = (item) => {
   return item.tags.join(" ")
 }
-
+const iThumb = (item) => {
+  return "/assets/images/" + item.attributes.images.thumb.local
+}
+const iImage = (item) => {
+  return "/assets/images/" + item.attributes.images.main.local
+}
+const iCaptured = (item) => {
+  return item.attributes.phrases.capture.safe
+}
+const iMuseum = (item) => {
+  return item.attributes.phrases.museum.safe
+}
 
 const is = (item, status, month, hemisphere, type) => {
   if(typeof month == "undefined")  month = currentMonth()
@@ -68,6 +79,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("iTypeTitle", iTypeTitle)
   eleventyConfig.addFilter("iTypeSlug", iTypeSlug)
   eleventyConfig.addFilter("iTags", iTags)
+  eleventyConfig.addFilter("iThumb", iThumb)
+  eleventyConfig.addFilter("iImage", iImage)
+  eleventyConfig.addFilter("iMuseum", iMuseum)
+  eleventyConfig.addFilter("iCaptured", iCaptured)
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
