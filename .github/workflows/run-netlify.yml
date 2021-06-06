@@ -1,6 +1,10 @@
 name: Run build on netlify
 
 on:
+  push:
+    branches:
+      - main
+
   schedule:
     # first day of the month at 2am
     - cron: '0 2 1 * *'
