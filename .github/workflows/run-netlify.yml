@@ -13,4 +13,4 @@ jobs:
   call_web:
     runs-on: ubuntu-latest
     steps:
-    - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5f14903bd1a690c0d1fce14a
+    - run: curl -X POST -d {} https://api.netlify.com/build_hooks/60dec41ab8c879863faad41b
